@@ -1,0 +1,20 @@
+{%extends 'base.html'%} 
+{%block body%}
+<body style="background-image: url(https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydGZvbGlvJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&w=1000&q=80);">
+    
+
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form action="" method="post">
+            {%csrf_token%}
+            {{form.as_p}}
+            <input type="submit" value="create">
+    </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+</body>
+{%endblock%}

@@ -1,0 +1,61 @@
+{%extends 'base.html'%}
+{%block body%}
+<div class="container">
+    {%if messages%}
+     <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            {%for msg in messages%}
+        
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>{{msg}}</strong> 
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+        
+          {%endfor%}
+        </div>
+        <div class="col"></div>
+     </div>
+    {%endif%}
+    <div class="row mt-5">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <table class="table">
+                <tr>
+                    <th>user</th>
+                 
+                    <th>title</th>
+                    <th>description</th>
+                  
+                    <th>status</th>
+                    <th>like</th>
+                </tr>
+                {%for t in todos%}
+                <tr>
+                    <td>{{t.user}}</td>
+                    <td>{{t.title}}</td>
+                    
+                    <td>{{t.description}}</td>
+                  
+
+                    <td>{{t.status}}</td>
+                    <td>{{t.like}}</td>
+                  
+                        <div>
+                            <a href="#">View</a>
+
+                        
+                        <a href="#">delete</a>
+                        </div>
+                    </td>
+                </tr>
+                {%endfor%}
+
+            </table>
+
+        </div>
+        <div class="col-2"></div>
+    </div>
+   </div>
+
+{%endblock%}
